@@ -3,8 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const challenge = document.createElement("div");
   challenge.innerHTML = `
     <h1>LuxProtect Verification</h1>
-    <p>Potvrdi da nisi bot klikom ispod</p>
-    <button id="verify">Nisam Bot</button>
+    <p>Confirm you are not a bot by clicking below</p>
+    <button id="verify">I am not a bot.</button>
   `;
   const container = document.getElementById("luxprotect");
   container.appendChild(challenge);
@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (duration < 500) botDetected = true;
 
     if (botDetected) {
-      alert("Pristup odbijen. Detektovan sumnjiv korisnik/bot.");
-      container.innerHTML = "<h2>Pristup odbijen.</h2>";
+      alert("Access denied. Suspicious user/bot detected.");
+      container.innerHTML = "<h2>Access denied</h2>";
     } else {
       container.remove();
       document.getElementById("main-content").style.display = "block"; // prikazuje pravi sadržaj
